@@ -1,42 +1,28 @@
-import Button from "./Button";
-import { GoBellFill, GoCloud, GoDatabase } from "react-icons/go";
+import Accordion from "./components/Accordion";
 
 function App() {
-  return (
-    <section>
-      <div>
-        <Button>Click me!</Button>
-      </div>
-      <div>
-        <Button primary rounded className="mb-5">
-          <GoBellFill />
-          Click me!
-        </Button>
-      </div>
-      <div>
-        <Button secondary outline>
-          Buy Now!
-        </Button>
-      </div>
-      <div>
-        <Button success>
-          <GoCloud />
-          See Deal!
-        </Button>
-      </div>
-      <div>
-        <Button warning>
-          <GoDatabase />
-          Hide Ads!
-        </Button>
-      </div>
-      <div>
-        <Button danger rounded outline>
-          Checkout!
-        </Button>
-      </div>
-    </section>
-  );
+  const items = [
+    {
+      id: 'sdfsfg',
+      label: "Can I use React on a project?",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt neque ut diam viverra, eget ullamcorper magna lacinia. Sed sit amet nisl quis nibh mattis porttitor. Duis turpis dui, porttitor eget nisl sit amet, pellentesque auctor elit. Mauris vitae mauris nibh. Praesent bibendum tristique lorem vitae rutrum.",
+    },
+    {
+      id:'hghgh',
+      label: "Can I use Javascript on a project?",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt neque ut diam viverra, eget ullamcorper magna lacinia. Sed sit amet nisl quis nibh mattis porttitor.",
+    },
+    {
+      id:'dfbtger',
+      label: "Can I use HTML on a project?",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt neque ut diam viverra, eget ullamcorper magna lacinia. Sed sit amet nisl quis nibh mattis porttitor. Duis turpis dui, porttitor eget nisl sit amet, pellentesque auctor elit.",
+    },
+  ];
+
+  return <Accordion items={items}/>;
 }
 
 export default App;
